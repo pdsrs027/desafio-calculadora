@@ -1,0 +1,62 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="primeiroNumero">
+    <input type="number" id="segundoNumero">
+    <input type="number" id="terceiroNumero">
+    <input type="number" id="quartoNumero">
+    <input type="number" id="quintoNumero">
+    <input type="number" id="sextoNumero">
+    <input type="number" id="setimoNumero">
+    <input type="number" id="oitavoNumero">
+    <input type="number" id="nonoNumero">
+    <input type="number" id="decimoNumero">
+    <button id="somar" onclick="calcular('somar')">somar</button>
+    <button id="subtrair" onclick="calcular('subtrair')">subtrair</button>
+    <button id="subtrair" onclick="calcular('nada')">limpar</button>
+    <button id="dividir" onclick="calcular('dividir')">dividir</button>
+    <button id="multiplicar" onclick="calcular('multiplicar')">mutiplicar</button>
+
+    <div id="resultado">??</div>
+    <script>
+        function calcular(operacao){
+            var primeiro = Number(document.getElementById("primeiroNumero").value);
+            var segundo = Number(document.getElementById("segundoNumero").value);
+            var terceiro = Number(document.getElementById("terceiroNumero").value);
+            var quarto = Number(document.getElementById("quartoNumero").value);
+            var quinto = Number(document.getElementById("quintoNumero").value);
+            var sexto= Number(document.getElementById("sextoNumero").value);
+            var setimo = Number(document.getElementById("setimoNumero").value);
+            var oitavo = Number(document.getElementById("oitavoNumero").value);
+            var nono = Number(document.getElementById("nonoNumero").value);
+            var decimo = Number(document.getElementById("decimoNumero").value);
+
+            var resultado = 0;
+
+            if(operacao == 'somar'){
+                resultado = primeiro + segundo + terceiro + quarto + quinto + sexto + setimo + oitavo + nono + decimo;
+            }
+
+            if(operacao == 'subtrair') {
+                resultado = primeiro - segundo - terceiro - quarto - quinto - sexto -setimo - oitavo - nono - decimo;
+            }
+
+            if(operacao == 'dividir') {
+                resultado = primeiro / segundo / terceiro / quarto / quinto / sexto / setimo / oitavo / nono / decimo;
+            }
+
+            if (operacao == 'multiplicar') {
+                resultado = primeiro * segundo * terceiro * quarto * quinto * sexto * setimo * oitavo * nono * decimo;
+}
+
+            document.getElementById("resultado").innerText = resultado;
+        }
+    </script>
+</body>
+</html>
